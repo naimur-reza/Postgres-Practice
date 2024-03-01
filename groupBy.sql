@@ -10,3 +10,12 @@ GROUP BY
     county
 HAVING
     avg(age) >= 30
+
+-- counting how many student born in year
+SELECT extract(
+        year
+        from dob
+    ) as birth_year, count(*)
+FROM person
+GROUP BY
+    birth_year
