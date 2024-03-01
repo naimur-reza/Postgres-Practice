@@ -17,3 +17,14 @@ SELECT to_char(now(), '') as "Current Date and Time";
 
 -- this is for counting age from person dob postgres
 SELECT dob, age (dob) as "Age" FROM person;
+
+SELECT extract( year from age (dob) ) as "Age" FROM person;
+--lets extract date and month at the same time
+SELECT extract(
+        year
+        from age (dob)
+    ) as "Age", extract(
+        month
+        from age (dob)
+    ) as "Month"
+FROM person;
