@@ -30,3 +30,7 @@ VALUES (
 SELECT age as personAge FROM person ORDER BY age ASC;
 
 SELECT upper(first_name) as newName, * FROM person
+
+SELECT COALESCE(county, 'Unknown') as country FROM person;
+
+SELECT * from person LIMIT 4
