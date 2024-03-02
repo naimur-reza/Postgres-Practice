@@ -33,6 +33,6 @@ VALUES ('first post', 1),
 
 SELECT * FROM "user";
 
-SELECT * FROM post
-
-DELETE FROM "user" WHERE id = 4;
+SELECT title, user_name
+FROM post
+    JOIN "user" on post.user_id = "user".id;
