@@ -1,0 +1,16 @@
+-- Active: 1708926568697@@127.0.0.1@5432@test_db@public
+
+-- FOR USER RELATION
+CREATE TABLE "user" (
+    id SERIAL PRIMARY KEY, user_name VARCHAR(25) NOT NULL
+);
+
+-- THAT MAKE POST TABLE MAKE RELATION WITH USER TABLE
+
+CREATE TABLE post (
+    id SERIAL PRIMARY KEY, title VARCHAR(100) NOT NULL, user_id INTEGER REFERENCES "user" (id)
+)
+
+INSERT INTO "user" (user_name) VALUES ('John');
+
+SELECT * FROM "user";
