@@ -33,6 +33,4 @@ VALUES ('first post', 1),
 
 SELECT * FROM "user";
 
-SELECT title, user_name
-FROM post
-    JOIN "user" on post.user_id = "user".id;
+SELECT * FROM post RIGHT JOIN "user" on post.user_id = "user".id;
